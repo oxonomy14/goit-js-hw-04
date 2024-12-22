@@ -9,17 +9,13 @@ function calcAverageCalories(days) {
   let totalCalories = 0;
   let averageCalories = 0;
 
-  const arr = Object.keys(days);
-
-  //console.log(arr.length);
-
-  if (arr.length) {
+  if (days.length) {
     for (const item of days) {
       totalCalories = totalCalories + item.calories;
-      averageCalories = totalCalories / arr.length;
+      averageCalories = totalCalories / days.length;
     }
   } else {
-    return `${arr.length}`;
+    return 0;
     //return "Массив немає значень! Введіть данні";
   }
 
